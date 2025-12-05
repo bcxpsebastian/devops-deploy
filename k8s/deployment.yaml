@@ -18,7 +18,7 @@ spec:
       containers:
         - name: dogs
           # Replace <GITHUB_OWNER> with your GitHub org/user if needed
-          image: ghcr.io/bcxpsebastian/dogs:561c00c98196c9efbfefee8411959f0bff443e56
+          image: ghcr.io/bcxpsebastian/dogs:094c194236206f20e9032ae7c014f95650e7257e
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
