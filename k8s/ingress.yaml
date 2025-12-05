@@ -5,9 +5,9 @@ metadata:
   namespace: dogs
   annotations:
     # Add ingress controller specific annotations as needed
-    kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/ingress.class: "traefik"
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   rules:
     - http:
         paths:
