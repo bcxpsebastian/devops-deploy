@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dogs
+  namespace: dogs
+  labels:
+    app: dogs
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dogs
+  template:
+    metadata:
+      labels:
+        app: dogs
+    spec:
+      containers:
+        - name: dogs
+          # Replace <GITHUB_OWNER> with your GitHub org/user if needed
+          image: ghcr.io/bcxpsebastian/dogs:e77c485f4d99d4a6d9c65edc3f47155ddbd427f1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dogs
+  namespace: dogs
+  labels:
+    app: dogs
+spec:
+  type: ClusterIP
+  selector:
+    app: dogs
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

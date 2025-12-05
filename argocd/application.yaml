@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dogs
+  namespace: argocd
+spec:
+  project: default
+  source:
+    # Replace with this repository's git URL
+    repoURL: "https://github.com/bcxpsebastian/devops-deploy"
+    targetRevision: HEAD
+    path: k8s
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: dogs
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
