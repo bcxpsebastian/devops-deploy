@@ -21,4 +21,4 @@ spec:
           image: ghcr.io/bcxpsebastian/dogs:e77c485f4d99d4a6d9c65edc3f47155ddbd427f1
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - containerPort: 8080
